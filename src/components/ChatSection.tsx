@@ -89,7 +89,14 @@ export default function ChatSection() {
       });
 
       if (!response.ok) {
-        throw new Error("连接失败");
+        let serverMessage = "连接失败";
+        try {
+          const errorData = await response.json();
+          serverMessage = errorData.details || errorData.error || serverMessage;
+        } catch {
+          // ignore parse errors
+        }
+        throw new Error(serverMessage);
       }
 
       const data = await response.json();
@@ -104,7 +111,7 @@ export default function ChatSection() {
       setMessages(prev => [...prev, modelMsg]);
     } catch (err: any) {
       console.error(err);
-      setErrorStatus("好像连不上了，可以点重试，或者直接加我微信聊。");
+      setErrorStatus(err?.message || "好像连不上了，可以点重试，或者直接加我微信聊。");
     } finally {
       setIsLoading(false);
     }

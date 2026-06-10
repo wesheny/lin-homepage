@@ -146,7 +146,13 @@ export default function ChatSection() {
             />
           </div>
           <div className="min-w-0">
-            <h3 className="font-bold text-base text-stone-900 leading-tight">和我聊聊</h3>
+            <div className="flex items-center gap-2">
+              <h3 className="font-bold text-base text-stone-900 leading-tight">和我聊聊</h3>
+              <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-emerald-50 text-emerald-700 text-[10px] font-medium border border-emerald-100">
+                <span className="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+                在线
+              </span>
+            </div>
             <p className="text-xs text-stone-500 mt-0.5 truncate">问我近况、作品，或者直接打字聊</p>
           </div>
         </div>

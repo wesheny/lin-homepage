@@ -1,4 +1,4 @@
-import { LIN_AN_SYSTEM_INSTRUCTION } from "../lib/linAnSystemInstruction.js";
+import { LIN_AN_SYSTEM_INSTRUCTION } from "../../lib/linAnSystemInstruction.js";
 
 function jsonResponse(body, status = 200) {
   return new Response(JSON.stringify(body), {

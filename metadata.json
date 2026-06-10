@@ -1,0 +1,6 @@
+{
+  "name": "林安个人主页",
+  "description": "林安的简约科技感个人主页，搭配数字分身AI智能聊天互动区、个人信息与作表达展示。",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
